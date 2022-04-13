@@ -50,7 +50,7 @@
     "tronweb": "^2.5.3",
     "tslib": "^1.9.3",
     "tweetnacl": "^1.0.0",
-    "web3": "1.0.0-beta.33"
+    "web3": "1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",

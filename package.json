@@ -28,7 +28,8 @@
     "proto": "node ./scripts/gen-proto.js",
     "abi": "node ./scripts/abi.js && bash ./scripts/fix_types.sh",
     "copy-contracts": "node ./scripts/copy-contracts.js",
-    "prepublish": "yarn proto && yarn abi && yarn build && webpack"
+    "prepublish": "yarn run snyk-protect && yarn proto && yarn abi && yarn build && webpack",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "abi-decoder": "^1.2.0",
@@ -40,7 +41,7 @@
     "ethereumjs-util": "^5.2.0",
     "ethers": "^4.0.9",
     "google-protobuf": "3.6",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
     "retry": "^0.12.0",
     "ripemd160": "^2.0.1",
@@ -50,7 +51,8 @@
     "tronweb": "^2.5.3",
     "tslib": "^1.9.3",
     "tweetnacl": "^1.0.0",
-    "web3": "1.0.0-beta.33"
+    "web3": "1.0.0-beta.33",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",
@@ -86,5 +88,6 @@
     "webpack-cli": "^3.1.1",
     "webpack-tape-run": "^0.0.7"
   },
-  "browserslist": "last 2 versions"
+  "browserslist": "last 2 versions",
+  "snyk": true
 }
